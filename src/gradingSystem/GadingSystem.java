@@ -13,7 +13,7 @@ public class GadingSystem {
         if (mark >= 0 && mark <= 100) {
             this.mark = mark;
         } else {
-            this.mark = -1; // Indicate an invalid mark
+            this.mark = -1; 
         }
         
         this.calculateGrade();
@@ -45,7 +45,7 @@ public class GadingSystem {
 	
 	private void calculateGrade() {
         if (this.mark < 0) {
-            this.grade = '?'; // Invalid mark
+            this.grade = '?'; 
         } else if (this.mark < 40) {
             this.grade = 'F';
         } else if (this.mark < 55) {
@@ -54,7 +54,7 @@ public class GadingSystem {
             this.grade = 'C';
         } else if (this.mark < 85) {
             this.grade = 'B';
-        } else { // 85 to 100
+        } else { 
             this.grade = 'A';
         }
     }
@@ -78,7 +78,7 @@ public class GadingSystem {
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("--- Welcome to the Student GadingSystem ---");
+		System.out.println("--- Welcome to the Student GradingSystem ---");
 		 
 		while (true) {
 	        System.out.println("\nEnter student name (or type 'quit' to exit):");
@@ -94,7 +94,7 @@ public class GadingSystem {
                 continue; 
             }
 
-            int currentMark = -1; // Initialize with an invalid value
+            int currentMark = -1; 
             boolean validMarkEntered = false;
             while (!validMarkEntered) {
                 System.out.println("Enter mark for " + currentName + " (0-100):");
@@ -127,7 +127,7 @@ public class GadingSystem {
         }
 
         System.out.println("\n--- GadingSystem finished. ---");
-        scanner.close(); // Close the scanner resource
+        scanner.close(); 
 
 	}
 
